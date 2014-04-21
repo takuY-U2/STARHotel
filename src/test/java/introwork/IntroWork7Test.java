@@ -10,7 +10,7 @@ import java.io.File;
  */
 public class IntroWork7Test extends ChromeDriverTest {
    @Test
-    public void test() throws Exception {
+    public void testGetAndCheckText() throws Exception {
         File html = new File("introwork/introWork7.html");
         String url = "file:///" + html.getAbsolutePath();
         driver.get(url);

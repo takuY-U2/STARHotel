@@ -45,7 +45,7 @@ public class IntroWork1Test {
      */
 
     @Test
-    public void test() throws Exception {
+    public void testLoginSuccess() throws Exception {
 
         // 入門課題1のURLを取得
         File html = new File("introwork/introWork1.html");
