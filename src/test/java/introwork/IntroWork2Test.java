@@ -1,15 +1,10 @@
 package introwork;
 
-import core.ChromeDriverTest;
-import org.apache.commons.lang3.SystemUtils;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-
 import java.io.File;
+
+import org.junit.Test;
+
+import core.ChromeDriverTest;
 
 /**
  * 入門課題その2:「クリックしてみよう」
