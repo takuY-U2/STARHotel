@@ -16,7 +16,7 @@ public class PracticeWork5Test extends ChromeDriverTest {
     }
     
     @Test
-    public void test() {        
+    public void testCheckInitialScreen() {
         File html = new File("reserveApp_Renewal/index.html");
         String url = "file:///" + html.getAbsolutePath();
         driver.get(url);
