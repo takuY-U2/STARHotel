@@ -16,33 +16,14 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import practicework.pages.ReserveConfirmPage;
 import practicework.pages.ReserveInputPage;
 
-public class PracticeWork3 {
-    private WebDriver driver;
-    
-    private String chromeDriverPath() {
-        String path;
-        if (SystemUtils.IS_OS_MAC || SystemUtils.IS_OS_MAC_OSX) {
-            path = "chromedriver/mac/chromedriver"; // Mac環境の場合
-        } else {
-            path = "chromedriver/win/chromedriver.exe"; // Windows環境の場合
-        }
-        File file = new File(path);
-        return file.getAbsolutePath();
-    }
-    
+public class PracticeWork3Test extends ChromeDriverTest {
     @Before
     public void setUp() {
-        System.setProperty("webdriver.chrome.driver", chromeDriverPath());
-        driver = new ChromeDriver();
+        super.setUp();
         // ページ遷移の際に少し待機するため
         driver.manage().timeouts().implicitlyWait(500, TimeUnit.MILLISECONDS);
     }
-    
-    @After
-    public void tearDown() {
-        driver.quit();
-    }
-    
+
     @Test
     public void test() {
         File html = new File("reserveApp/index.html");
