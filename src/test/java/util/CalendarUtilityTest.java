@@ -10,7 +10,7 @@ import static org.junit.Assert.assertThat;
 /**
  * Created by kenichiro_ota on 2014/04/24.
  */
-public class DateUtilityTest {
+public class CalendarUtilityTest {
     @Test
     public void testGetImmediateSaturdayOfWeekWhenTodayIsFriday() throws Exception {
         Calendar friday = Calendar.getInstance();
@@ -21,7 +21,7 @@ public class DateUtilityTest {
         saturday.clear();
         saturday.set(2014, Calendar.APRIL, 26);
 
-        assertThat(DateUtility.getImmediateDayOfWeek(friday, Calendar.SATURDAY), is(saturday));
+        assertThat(CalendarUtility.getImmediateDayOfWeek(friday, Calendar.SATURDAY), is(saturday));
     }
 
     @Test
@@ -34,7 +34,7 @@ public class DateUtilityTest {
         nextSaturday.clear();
         nextSaturday.set(2014, Calendar.MAY, 3);
 
-        assertThat(DateUtility.getImmediateDayOfWeek(saturday, Calendar.SATURDAY), is(nextSaturday));
+        assertThat(CalendarUtility.getImmediateDayOfWeek(saturday, Calendar.SATURDAY), is(nextSaturday));
     }
     
     @Test
@@ -47,7 +47,7 @@ public class DateUtilityTest {
         saturday.clear();
         saturday.set(2014, Calendar.MAY, 3);
 
-        assertThat(DateUtility.getImmediateDayOfWeek(sunday, Calendar.SATURDAY), is(saturday));
+        assertThat(CalendarUtility.getImmediateDayOfWeek(sunday, Calendar.SATURDAY), is(saturday));
     }
 
     @Test
@@ -60,6 +60,6 @@ public class DateUtilityTest {
         nextSaturday.clear();
         nextSaturday.set(2014, Calendar.MAY, 4);
 
-        assertThat(DateUtility.getImmediateDayOfWeek(sunday, Calendar.SUNDAY), is(nextSaturday));
+        assertThat(CalendarUtility.getImmediateDayOfWeek(sunday, Calendar.SUNDAY), is(nextSaturday));
     }
 }
