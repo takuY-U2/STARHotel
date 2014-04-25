@@ -105,8 +105,8 @@ public class PracticeWork1Test extends ChromeDriverTest {
 
        // 2ページ目入力画面
        assertThat(driver.findElement(By.id("price")).getText(), is("105750"));
-       assertThat(driver.findElement(By.id("datefrom")).getText(), is(reserveYear + "年" + reserveMonth + "月" + reserveDay + "日")); // TODO 変更
-       assertThat(driver.findElement(By.id("dateto")).getText(), is(reserveYear + "年" + reserveMonth + "月" + (reserveDay + 1) + "日")); // TODO 変更
+       assertThat(driver.findElement(By.id("datefrom")).getText(), is(reserveYear + "年" + reserveMonth + "月" + reserveDay + "日"));
+       assertThat(driver.findElement(By.id("dateto")).getText(), is(reserveYear + "年" + reserveMonth + "月" + (reserveDay + 1) + "日"));
        assertThat(driver.findElement(By.id("dayscount")).getText(), is("1"));
        assertThat(driver.findElement(By.id("hc")).getText(), is("9"));
        assertThat(driver.findElement(By.id("bf_order")).getText(), is("あり"));
