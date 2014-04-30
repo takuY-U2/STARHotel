@@ -4,17 +4,17 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class ReserveConfirmPage {
-    private WebDriver driver;    
-    private By price = By.id("price");
-    private By dateFrom = By.id("datefrom");
-    private By dateTo = By.id("dateto");
-    private By daysCount = By.id("dayscount");
-    private By hc = By.id("hc");
-    private By bfOrder = By.id("bf_order");
-    private By planAOrder = By.id("plan_a_order");
-    private By planBOrder = By.id("plan_b_order");
-    private By gName = By.id("gname");
-    private By commit = By.id("commit");
+    private final WebDriver driver;
+    private final By price = By.id("price");
+    private final By dateFrom = By.id("datefrom");
+    private final By dateTo = By.id("dateto");
+    private final By daysCount = By.id("dayscount");
+    private final By hc = By.id("hc");
+    private final By bfOrder = By.id("bf_order");
+    private final By planAOrder = By.id("plan_a_order");
+    private final By planBOrder = By.id("plan_b_order");
+    private final By gName = By.id("gname");
+    private final By commit = By.id("commit");
         
     public ReserveConfirmPage(WebDriver driver) {
         this.driver = driver;

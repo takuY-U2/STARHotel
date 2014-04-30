@@ -7,16 +7,16 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
 public class ReserveInputPage {
-    private WebDriver driver;
-    private By datePick = By.id("datePick");
-    private By reserveTerm = By.id("reserve_term");
-    private By headCount = By.id("headcount");
-    private By breakfastOn = By.id("breakfast_on");
-    private By breakfastOff = By.id("breakfast_off");
-    private By planA = By.id("plan_a");
-    private By planB = By.id("plan_b");
-    private By guestName = By.id("guestname");
-    private By goToNext = By.id("agree_and_goto_next");
+    private final WebDriver driver;
+    private final By datePick = By.id("datePick");
+    private final By reserveTerm = By.id("reserve_term");
+    private final By headCount = By.id("headcount");
+    private final By breakfastOn = By.id("breakfast_on");
+    private final By breakfastOff = By.id("breakfast_off");
+    private final By planA = By.id("plan_a");
+    private final By planB = By.id("plan_b");
+    private final By guestName = By.id("guestname");
+    private final By goToNext = By.id("agree_and_goto_next");
 
     public ReserveInputPage(WebDriver driver) {
         this.driver = driver;

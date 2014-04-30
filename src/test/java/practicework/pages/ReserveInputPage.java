@@ -5,12 +5,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 public class ReserveInputPage {
-    private WebDriver driver;
-    private By reserveYear = By.id("reserve_year");
-    private By reserveMonth = By.id("reserve_month");
-    private By reserveDay = By.id("reserve_day");
-    private By reserveTerm = By.id("reserve_term");
-    private By goToNext = By.id("goto_next");
+    private final WebDriver driver;
+    private final By reserveYear = By.id("reserve_year");
+    private final By reserveMonth = By.id("reserve_month");
+    private final By reserveDay = By.id("reserve_day");
+    private final By reserveTerm = By.id("reserve_term");
+    private final By goToNext = By.id("goto_next");
 
     public ReserveInputPage(WebDriver driver) {
         this.driver = driver;

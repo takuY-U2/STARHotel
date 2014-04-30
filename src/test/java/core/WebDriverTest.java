@@ -7,7 +7,7 @@ import org.openqa.selenium.WebDriver;
  * Created by kenichiro_ota on 2014/04/21.
  */
 public class WebDriverTest {
-    public WebDriver driver;
+    protected WebDriver driver;
 
     @After
     public void tearDown() {

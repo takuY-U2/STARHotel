@@ -4,11 +4,11 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class ReserveConfirmPage {
-    private WebDriver driver;    
-    private By price = By.id("price");
-    private By dateFrom = By.id("datefrom");
-    private By dateTo = By.id("dateto");
-    private By daysCount = By.id("dayscount");
+    private final WebDriver driver;
+    private final By price = By.id("price");
+    private final By dateFrom = By.id("datefrom");
+    private final By dateTo = By.id("dateto");
+    private final By daysCount = By.id("dayscount");
         
     public ReserveConfirmPage(WebDriver driver) {
         this.driver = driver;
