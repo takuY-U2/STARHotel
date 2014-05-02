@@ -10,7 +10,7 @@ class IntroWork1Spec extends GebSpec {
         when:
         // 入門課題1のURLを取得
         File html = new File("introwork/introWork1.html")
-        String url = "file:///" + html.getAbsolutePath()
+        String url = "file:///" + html.absolutePath
 
         // 指定したURLのウェブページに移動
         go url

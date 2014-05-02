@@ -4,10 +4,10 @@ import geb.spock.GebSpec
 import util.CalendarUtility
 
 class PracticeWork1Spec extends GebSpec {
-    def "OnetCanReserveWith9MembersUsingCalendarUtility"() {
+    def "OneCanReserveWith9MembersUsingCalendarUtility"() {
         when:
         File html = new File("reserveApp/index.html")
-        String url = "file:///" + html.getAbsolutePath()
+        String url = "file:///" + html.absolutePath
         go url
 
         // TODO 以下は削除してください

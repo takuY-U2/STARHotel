@@ -9,7 +9,7 @@ class IntroWork4Spec extends GebSpec {
     def "OneCanClickRadioButton"() {
         when:
         File html = new File("introwork/introWork4.html")
-        String url = "file:///" + html.getAbsolutePath()
+        String url = "file:///" + html.absolutePath
         go url
 
         then:

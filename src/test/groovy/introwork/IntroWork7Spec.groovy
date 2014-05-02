@@ -9,7 +9,7 @@ class IntroWork7Spec extends GebSpec {
     def "OneCanGetAndCheckText"() {
         when:
         File html = new File("introwork/introWork7.html")
-        String url = "file:///" + html.getAbsolutePath()
+        String url = "file:///" + html.absolutePath
         go url
 
         then:

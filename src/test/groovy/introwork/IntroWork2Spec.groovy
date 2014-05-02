@@ -8,8 +8,8 @@ import geb.spock.GebSpec;
 class IntroWork2Spec extends GebSpec {
     def "OneCanClickOKButton"() {
         when:
-        File html = new File("introwork/introWork2.html");
-        String url = "file:///" + html.getAbsolutePath();
+        File html = new File("introwork/introWork2.html")
+        String url = "file:///" + html.absolutePath
         go url
 
         then:
