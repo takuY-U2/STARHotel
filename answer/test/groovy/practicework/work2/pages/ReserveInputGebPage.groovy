@@ -2,7 +2,7 @@ package practicework.pages
 
 import geb.Page;
 
-public class ReserveInputGebPage extends Page {
+class ReserveInputGebPage extends Page {
     static String url = "file:///" + new File("reserveApp/index.html").absolutePath
     static content = {
         reserveYear { $("#reserve_year") }

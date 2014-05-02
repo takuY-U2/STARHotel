@@ -4,7 +4,7 @@ import geb.spock.GebSpec
 import util.CalendarUtility
 
 class PracticeWork1Spec extends GebSpec {
-    def "OnetCanReserveWith9MembersUsingCalendarUtility"() {
+    def "OnetCanReserveWith9Members"() {
         when:
         File html = new File("reserveApp/index.html")
         String url = "file:///" + html.absolutePath
