@@ -10,11 +10,11 @@ class PracticeWork3Spec extends GebSpec {
         when:
         ReserveInputGebPage reserveInputGebPage = browser.to ReserveInputGebPage
 
-        // 現在のシステム日付を起点に明日以降の直近の土曜日を取得します
-        Calendar immediateSaturday = CalendarUtility.getImmediateDayOfWeek(Calendar.getInstance(), Calendar.SUNDAY)
-        int reserveYear = immediateSaturday.get(Calendar.YEAR)
-        int reserveMonth = immediateSaturday.get(Calendar.MONTH) + 1
-        int reserveDay = immediateSaturday.get(Calendar.DAY_OF_MONTH)
+        // 現在のシステム日付を起点に明日以降の直近の日曜日を取得します
+        Calendar immediateSunday = CalendarUtility.getImmediateDayOfWeek(Calendar.getInstance(), Calendar.SUNDAY)
+        int reserveYear = immediateSunday.get(Calendar.YEAR)
+        int reserveMonth = immediateSunday.get(Calendar.MONTH) + 1
+        int reserveDay = immediateSunday.get(Calendar.DAY_OF_MONTH)
 
         // 上記で取得した直近の土曜日を使用します
         reserveInputGebPage.setReserveDate(reserveYear, reserveMonth, reserveDay)
