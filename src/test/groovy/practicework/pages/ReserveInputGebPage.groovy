@@ -13,9 +13,9 @@ class ReserveInputGebPage extends Page {
     }
 
     public void setReserveDate(int year, int month, int day) {
-        reserveYear.value(year)
-        reserveMonth.value(month)
-        reserveDay.value(day)
+        reserveYear = year
+        reserveMonth = month
+        reserveDay = day
     }
 
     public void goToNext() {
