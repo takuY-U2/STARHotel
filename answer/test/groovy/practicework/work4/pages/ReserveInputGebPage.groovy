@@ -18,7 +18,7 @@ class ReserveInputGebPage extends Page {
     }
 
     public void setReserveDate(int year, int month, int day) {
-        datePick.value(year + "/" + month + "/" + day)
+        datePick = year + "/" + month + "/" + day
         datePick << Keys.RETURN
     }
 

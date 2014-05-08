@@ -16,7 +16,7 @@ class PracticeWork3Spec extends GebSpec {
         int reserveMonth = immediateSunday.get(Calendar.MONTH) + 1
         int reserveDay = immediateSunday.get(Calendar.DAY_OF_MONTH)
 
-        // 上記で取得した直近の土曜日を使用します
+        // 上記で取得した直近の日曜日を使用します
         reserveInputGebPage.setReserveDate(reserveYear, reserveMonth, reserveDay)
         reserveInputGebPage.reserveTerm = "3"
         reserveInputGebPage.headCount = "1"
