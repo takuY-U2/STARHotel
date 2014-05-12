@@ -1,6 +1,7 @@
 package introwork;
 
 import org.junit.Test;
+import core.ChromeDriverTest;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
@@ -13,7 +14,7 @@ import static org.junit.Assert.assertThat;
  * 入門課題その7:「表示された値のチェックをしてみよう」
  * 解答例
  */
-public class IntroWork7 extends ChromeDriverTest {
+public class IntroWork7Test extends ChromeDriverTest {
     @Test
     public void testGetAndCheckText() throws Exception {
         File html = new File("introwork/introWork7.html");
