@@ -16,7 +16,7 @@ public class IntroWork2Test extends ChromeDriverTest {
    @Test
     public void testClickOKButton() throws Exception {
         File html = new File("introwork/introWork2.html");
-        String url = "file:///" + html.getAbsolutePath();
+        String url = html.toURI().toString();
         driver.get(url);
         
         WebElement okButton = driver.findElement(By.id("ok_button"));

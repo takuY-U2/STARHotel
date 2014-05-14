@@ -7,7 +7,7 @@ class PracticeWork1Spec extends GebSpec {
     def "OneCanReserveWith9Members"() {
         when:
         File html = new File("reserveApp/index.html")
-        String url = "file:///" + html.absolutePath
+        String url = html.toURI().toString()
         go url
 
         // TODO 以下は削除してください

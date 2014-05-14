@@ -10,7 +10,7 @@ class IntroWork6Spec extends GebSpec {
     def "OneCanSelectOptionByValue"() {
         when:
         File html = new File("introwork/introWork6.html")
-        String url = "file:///" + html.absolutePath
+        String url = html.toURI().toString()
         go url
 
         then:

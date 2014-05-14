@@ -15,7 +15,7 @@ public class EnvironmentCheckTest extends ChromeDriverTest {
     @Test
     public void checkThatInstalledSuccessfully() {
         File html = new File("introWork/introWork1.html");
-        String url = "file:///" + html.getAbsolutePath();
+        String url = html.toURI().toString();
         driver.get(url);        
         WebElement userName = driver.findElement(By.id("user_name"));
         userName.sendKeys("TestUser");

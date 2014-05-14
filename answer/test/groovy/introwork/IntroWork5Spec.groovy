@@ -10,7 +10,7 @@ class IntroWork5Spec extends GebSpec {
     def "OneCanSetCheckbox"() {
         when:
         File html = new File("introwork/introWork5.html")
-        String url = "file:///" + html.absolutePath
+        String url = html.toURI().toString()
         go url
 
         then:

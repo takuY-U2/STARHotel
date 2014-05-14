@@ -27,7 +27,7 @@ public class PracticeWork2Test extends ChromeDriverTest  {
     @Test
     public void testReserveWith9MmebersUsingPageObject() {
         File html = new File("reserveApp/index.html");
-        String url = "file:///" + html.getAbsolutePath();
+        String url = html.toURI().toString();
         driver.get(url);
         
         // 1ページ目入力画面

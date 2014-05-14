@@ -23,7 +23,7 @@ public class PracticeWork3Test extends ChromeDriverTest {
     @Test
     public void testReserveWith1Member() {
         File html = new File("reserveApp/index.html");
-        String url = "file:///" + html.getAbsolutePath();
+        String url = html.toURI().toString();
         driver.get(url);
         
         ReserveInputPage inputPage = new ReserveInputPage(driver);

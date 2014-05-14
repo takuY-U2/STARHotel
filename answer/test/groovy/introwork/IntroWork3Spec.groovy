@@ -10,7 +10,7 @@ class IntroWork3Spec extends GebSpec {
     def "OneCanSetValue"() {
         when:
         File html = new File("introwork/introWork3.html")
-        String url = "file:///" + html.absolutePath
+        String url = html.toURI().toString()
         go url
 
         then:

@@ -7,7 +7,7 @@ class PracticeWork1Spec extends GebSpec {
     def "OnetCanReserveWith9Members"() {
         when:
         File html = new File("reserveApp/index.html")
-        String url = "file:///" + html.absolutePath
+        String url = html.toURI().toString()
         go url
 
         // 現在のシステム日付を起点に明日以降の直近の土曜日を取得します

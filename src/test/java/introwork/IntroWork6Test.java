@@ -12,7 +12,7 @@ public class IntroWork6Test extends ChromeDriverTest {
    @Test
     public void testSelectOptionByValue() throws Exception {
         File html = new File("introwork/introWork6.html");
-        String url = "file:///" + html.getAbsolutePath();
+        String url = html.toURI().toString();
         driver.get(url);
         
         // TODO 以下を削除して、代わりにチェックボックスを選択する処理を記述ください

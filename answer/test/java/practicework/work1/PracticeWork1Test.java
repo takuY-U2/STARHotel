@@ -26,7 +26,7 @@ public class PracticeWork1Test extends ChromeDriverTest {
     @Test
     public void testReserveWith9Members() {
         File html = new File("reserveApp/index.html");
-        String url = "file:///" + html.getAbsolutePath();
+        String url = html.toURI().toString();
         driver.get(url);
         
         // 1ページ目入力画面
@@ -70,7 +70,7 @@ public class PracticeWork1Test extends ChromeDriverTest {
     @Test
     public void testReserveWith9MembersUsingCalendarUtility() {
         File html = new File("reserveApp/index.html");
-        String url = "file:///" + html.getAbsolutePath();
+        String url = html.toURI().toString();
         driver.get(url);
 
         // 現在のシステム日付を起点に明日以降の直近の土曜日を取得します

@@ -49,7 +49,7 @@ public class IntroWork1Test {
 
         // 入門課題1のURLを取得
         File html = new File("introwork/introWork1.html");
-        String url = "file:///" + html.getAbsolutePath();
+        String url = html.toURI().toString();
         System.out.println(url);
 
         // 指定したURLのウェブページに移動

@@ -15,7 +15,7 @@ public class IntroWork5Test extends ChromeDriverTest {
     @Test
     public void testClickCheckbox() throws Exception {
         File html = new File("introwork/introWork5.html");
-        String url = "file:///" + html.getAbsolutePath();
+        String url = html.toURI().toString();
         driver.get(url);
         
         WebElement allowedCheck = driver.findElement(By.id("allowed_check"));

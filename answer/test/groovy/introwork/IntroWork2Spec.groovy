@@ -10,7 +10,7 @@ class IntroWork2Spec extends GebSpec {
     def "OneCanClickOKButton"() {
         when:
         File html = new File("introwork/introWork2.html");
-        String url = "file:///" + html.absolutePath
+        String url = html.toURI().toString()
         go url
 
         then:

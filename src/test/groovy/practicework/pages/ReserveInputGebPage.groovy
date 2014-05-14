@@ -3,7 +3,7 @@ package practicework.pages
 import geb.Page
 
 class ReserveInputGebPage extends Page {
-    static String url = "file:///" + new File("reserveApp/index.html").absolutePath
+    static String url = "file:///" + new File("reserveApp/index.html").toURI().toString()
     static content = {
         reserveYear { $("#reserve_year") }
         reserveMonth { $("#reserve_month") }

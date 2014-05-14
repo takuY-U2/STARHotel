@@ -4,7 +4,7 @@ import geb.Page
 import org.openqa.selenium.Keys;
 
 class ReserveInputGebPage extends Page {
-    static String url = "file:///" + new File("reserveApp_Renewal/index.html").absolutePath
+    static String url = "file:///" + new File("reserveApp_Renewal/index.html").toURI().toString()
     static content = {
         datePick { $("#datePick") }
         reserveTerm { $("#reserve_term") }

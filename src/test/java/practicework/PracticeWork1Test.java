@@ -22,7 +22,7 @@ public class PracticeWork1Test extends ChromeDriverTest {
    @Test
     public void testReserveWith9Mmebers() throws Exception {
         File html = new File("reserveApp/index.html");
-        String url = "file:///" + html.getAbsolutePath();
+        String url = html.toURI().toString();
         driver.get(url);
         
         // TODO 以下は削除してください
