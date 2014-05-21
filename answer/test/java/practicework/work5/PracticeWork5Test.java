@@ -1,20 +1,15 @@
 package practicework;
 
-import static org.hamcrest.core.Is.is;
-import static org.junit.Assert.assertThat;
-
-import java.io.File;
-import java.util.Calendar;
-import java.util.concurrent.TimeUnit;
-
-import org.apache.commons.lang3.SystemUtils;
-import org.junit.After;
+import core.ChromeDriverTest;
 import org.junit.Before;
 import org.junit.Test;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-
 import practicework.pages.ReserveInputPage;
+
+import java.io.File;
+import java.util.concurrent.TimeUnit;
+
+import static org.hamcrest.core.Is.is;
+import static org.junit.Assert.assertThat;
 
 public class PracticeWork5Test extends ChromeDriverTest {
     @Before
