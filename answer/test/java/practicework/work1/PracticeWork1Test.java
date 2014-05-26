@@ -103,9 +103,14 @@ public class PracticeWork1Test extends ChromeDriverTest {
         driver.findElement(By.id("goto_next")).click();
 
         // 2ページ目入力画面
+        Calendar checkoutSunday = (Calendar) immediateSaturday.clone();
+        checkoutSunday.add(Calendar.DAY_OF_MONTH, 1);
+        int checkoutYear = checkoutSunday.get(Calendar.YEAR);
+        int checkoutMonth = checkoutSunday.get(Calendar.MONTH) + 1;
+        int checkoutDay = checkoutSunday.get(Calendar.DAY_OF_MONTH);
         assertThat(driver.findElement(By.id("price")).getText(), is("105750"));
         assertThat(driver.findElement(By.id("datefrom")).getText(), is(reserveYear + "年" + reserveMonth + "月" + reserveDay + "日"));
-        assertThat(driver.findElement(By.id("dateto")).getText(), is(reserveYear + "年" + reserveMonth + "月" + (reserveDay + 1) + "日"));
+        assertThat(driver.findElement(By.id("dateto")).getText(), is(checkoutYear + "年" + checkoutMonth + "月" + checkoutDay + "日"));
         assertThat(driver.findElement(By.id("dayscount")).getText(), is("1"));
         assertThat(driver.findElement(By.id("hc")).getText(), is("9"));
         assertThat(driver.findElement(By.id("bf_order")).getText(), is("あり"));
