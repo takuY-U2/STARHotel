@@ -29,9 +29,14 @@ class PracticeWork3Spec extends GebSpec {
         then:
         ReserveConfirmGebPage reserveConfirmGebPage = browser.at ReserveConfirmGebPage
 
+        Calendar checkoutWednesday = (Calendar) immediateSunday.clone()
+        checkoutWednesday.add(Calendar.DAY_OF_MONTH, 3)
+        int checkoutYear = checkoutWednesday.get(Calendar.YEAR)
+        int checkoutMonth = checkoutWednesday.get(Calendar.MONTH) + 1
+        int checkoutDay = checkoutWednesday.get(Calendar.DAY_OF_MONTH)
         reserveConfirmGebPage.price.text()  == "22750"
         reserveConfirmGebPage.dateFrom.text() == reserveYear + "年" + reserveMonth + "月" + reserveDay + "日"
-        reserveConfirmGebPage.dateTo.text() == reserveYear + "年" + reserveMonth + "月" + (reserveDay + 3) + "日"
+        reserveConfirmGebPage.dateTo.text() == checkoutYear + "年" + checkoutMonth + "月" + checkoutDay + "日"
         reserveConfirmGebPage.daysCount.text() == "3"
         reserveConfirmGebPage.headCount.text() == "1"
         reserveConfirmGebPage.breakfast.text() == "なし"

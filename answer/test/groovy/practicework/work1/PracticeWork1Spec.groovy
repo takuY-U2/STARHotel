@@ -29,9 +29,14 @@ class PracticeWork1Spec extends GebSpec {
         $("#goto_next").click()
 
         then:
+        Calendar checkoutSunday = (Calendar) immediateSaturday.clone()
+        checkoutSunday.add(Calendar.DAY_OF_MONTH, 1)
+        int checkoutYear = checkoutSunday.get(Calendar.YEAR)
+        int checkoutMonth = checkoutSunday.get(Calendar.MONTH) + 1
+        int checkoutDay = checkoutSunday.get(Calendar.DAY_OF_MONTH)
         $("#price").text() == "105750"
         $("#datefrom").text() ==  reserveYear + "年" + reserveMonth + "月" + reserveDay + "日"
-        $("#dateto").text() == reserveYear + "年" + reserveMonth + "月" + (reserveDay + 1) + "日"
+        $("#dateto").text() == checkoutYear + "年" + checkoutMonth + "月" + checkoutDay + "日"
         $("#dayscount").text() == "1"
         $("#hc").text() == "9"
         $("#bf_order").text() == "あり"
