@@ -34,7 +34,7 @@ class ReserveInputGebPage extends Page {
     }
 
     public boolean getBreakfast() {
-        return breakfastOn.attr("checked") == "true" ? true : false
+        return breakfastOn.attr("checked") == "true"
     }
     public void goToNext() {
         goToNext.click()
