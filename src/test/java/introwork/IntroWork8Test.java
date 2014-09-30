@@ -6,7 +6,7 @@ import org.junit.Test;
 import java.io.File;
 
 /**
- * 入門課題その2:「クリックしてみよう」
+ * 入門課題その8:「画面下のボタンまでスクロールしてみよう」
  */
 public class IntroWork8Test extends ChromeDriverTest {
     @Test
