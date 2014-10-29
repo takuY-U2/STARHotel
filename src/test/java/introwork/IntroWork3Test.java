@@ -9,7 +9,7 @@ import java.io.File;
  * 入門課題その3:「文字列を入力してみよう」
  */
 public class IntroWork3Test extends ChromeDriverTest {
-   @Test
+    @Test
     public void testClearAndSendKeys() throws Exception {
         File html = new File("introwork/introWork3.html");
         String url = html.toURI().toString();

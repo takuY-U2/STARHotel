@@ -19,7 +19,7 @@ public class PracticeWork1Test extends ChromeDriverTest {
         driver.manage().timeouts().implicitlyWait(500, TimeUnit.MILLISECONDS);
     }
 
-   @Test
+    @Test
     public void testReserveWith9Mmebers() throws Exception {
         File html = new File("reserveApp/index.html");
         String url = html.toURI().toString();

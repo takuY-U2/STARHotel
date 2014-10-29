@@ -9,7 +9,7 @@ import java.io.File;
  * 入門課題その5:「チェックボックスを選択してみよう」
  */
 public class IntroWork5Test extends ChromeDriverTest {
-   @Test
+    @Test
     public void testClickCheckbox() throws Exception {
         File html = new File("introwork/introWork5.html");
         String url = html.toURI().toString();

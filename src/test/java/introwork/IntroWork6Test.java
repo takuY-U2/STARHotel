@@ -9,7 +9,7 @@ import java.io.File;
  * 入門課題その6:「プルダウンを選択してみよう」
  */
 public class IntroWork6Test extends ChromeDriverTest {
-   @Test
+    @Test
     public void testSelectOptionByValue() throws Exception {
         File html = new File("introwork/introWork6.html");
         String url = html.toURI().toString();

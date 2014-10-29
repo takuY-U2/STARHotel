@@ -9,7 +9,7 @@ import java.io.File;
  * 入門課題その7:「表示された値のチェックをしてみよう」
  */
 public class IntroWork7Test extends ChromeDriverTest {
-   @Test
+    @Test
     public void testGetAndCheckText() throws Exception {
         File html = new File("introwork/introWork7.html");
         String url = html.toURI().toString();

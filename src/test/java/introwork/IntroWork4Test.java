@@ -9,7 +9,7 @@ import java.io.File;
  * 入門課題その4:「ラジオボタンを選択してみよう」
  */
 public class IntroWork4Test extends ChromeDriverTest {
-   @Test
+    @Test
     public void testClickRadioButton() throws Exception {
         File html = new File("introwork/introWork4.html");
         String url = html.toURI().toString();

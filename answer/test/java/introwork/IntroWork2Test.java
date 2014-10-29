@@ -13,7 +13,7 @@ import java.io.File;
  * 解答例
  */
 public class IntroWork2Test extends ChromeDriverTest {
-   @Test
+    @Test
     public void testClickOKButton() throws Exception {
         File html = new File("introwork/introWork2.html");
         String url = html.toURI().toString();
