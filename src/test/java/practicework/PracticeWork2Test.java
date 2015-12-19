@@ -9,9 +9,17 @@ import java.util.concurrent.TimeUnit;
 import org.junit.Before;
 import org.junit.Test;
 
+import core.ChromeDriverTest;
+import org.junit.Before;
+import org.junit.Test;
 import practicework.pages.ReserveConfirmPage;
 import practicework.pages.ReserveInputPage;
-import core.ChromeDriverTest;
+
+import java.io.File;
+import java.util.concurrent.TimeUnit;
+
+import static org.hamcrest.core.Is.is;
+import static org.junit.Assert.assertThat;
 
 public class PracticeWork2Test extends ChromeDriverTest {
     @Before
@@ -22,26 +30,33 @@ public class PracticeWork2Test extends ChromeDriverTest {
     }
 
     @Test
-    public void testReserveWith9MmebersUsingPageObject() throws Exception {
-        File html = new File("reserveApp/index.html");
+    public void testReserveWith9MmebersUsingPageObject() {
+        File html = new File("reserveApp_Renewal/index.html");
         String url = html.toURI().toString();
         driver.get(url);
-        
+
         // 1ページ目入力画面
         ReserveInputPage inputPage = new ReserveInputPage(driver);
-        inputPage.setReserveDate("2013", "12", "7");  // TODO 明日以降直近の土曜日に変更してください
+        inputPage.setReserveDate("2015", "12", "26"); // TODO 明日以降直近の土曜日に変更
         inputPage.setReserveTerm("1");
-        
-        // TODO 残りの処理を記述してください
-        
+        inputPage.setHeadCount("9");
+        inputPage.setBreakfast(true);
+        inputPage.setPlanA(true);
+        inputPage.setPlanB(true);
+        inputPage.setGuestName("a");
         ReserveConfirmPage confirmPage = inputPage.goToNext();
-        
+
         // 2ページ目入力画面
         assertThat(confirmPage.getPrice(), is("105750"));
-        assertThat(confirmPage.getDateFrom(), is("2013年12月7日")); // TODO 変更してください
-        assertThat(confirmPage.getDateTo(), is("2013年12月8日")); // TODO 変更してください
+        assertThat(confirmPage.getDateFrom(), is("2013年12月26日")); // TODO 変更
+        assertThat(confirmPage.getDateTo(), is("2013年12月27日")); // TODO 変更
         assertThat(confirmPage.getDaysCount(), is("1"));
-
-        // TODO 残りの処理を記述してください
+        assertThat(confirmPage.getHeadCount(), is("9"));
+        assertThat(confirmPage.getBreakfast(), is("あり"));
+        assertThat(confirmPage.getPlanA(), is("昼からチェックインプラン"));
+        assertThat(confirmPage.getPlanB(), is("お得な観光プラン"));
+        assertThat(confirmPage.getGuestName(), is("a"));
+        confirmPage.commit();
     }
 }
+
